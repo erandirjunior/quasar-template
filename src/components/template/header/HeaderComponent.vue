@@ -28,6 +28,7 @@
         </q-toolbar-title>
         <q-btn
           round
+          flat
           icon="notifications"
           size="13px"
           class="my-notification"
