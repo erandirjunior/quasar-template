@@ -59,7 +59,9 @@ module.exports = function (ctx) {
         'QPopover',
         'QItemSeparator',
         'QScrollArea',
-        'QChip'
+        'QChip',
+        'QInput',
+        'QCollapsible'
       ],
       directives: [
         'Ripple'
