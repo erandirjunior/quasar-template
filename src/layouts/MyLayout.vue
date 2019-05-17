@@ -3,7 +3,6 @@
     <header-component
       @handleState="handleState()"
     />
-
     <component
       :is="sidebarComponent"
       :miniState="miniState"
@@ -12,7 +11,7 @@
     />
 
     <q-page-container style="background-color: #EEEEEE !important;">
-      <router-view />
+      <router-view :style="getMarginPage()"/>
     </q-page-container>
   </q-layout>
 </template>
@@ -38,6 +37,18 @@ export default {
     },
     setStateDrawer (state) {
       this.miniState = state
+    },
+    checkIfIsDrawerOpenAndIsDesktopMode () {
+      if (this.leftDrawerOpen && !this.miniState) {
+        return true
+      }
+      return false
+    },
+    getMarginPage () {
+      if (this.leftDrawerOpen && !this.miniState) {
+        return 'margin-left: 22% !important'
+      }
+      return ''
     }
   },
   components: {
@@ -58,7 +69,7 @@ export default {
     background-color: #1a1e34 !important;
     top: 86px !important;
     transform: translateX(21px) !important;
-    height: 560px !important;
+    height: 550px !important;
     border-radius: 0px 20px;
   }
   .q-layout-drawer-mobile {
