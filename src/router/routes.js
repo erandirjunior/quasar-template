@@ -7,19 +7,19 @@ const routes = [
       { path: '', component: () => import('pages/Index.vue') },
       {
         path: '/form/fields',
-        component: () => import('pages/template/form/FieldPage.vue')
+        component: () => import('pages/templates/form/FieldPage.vue')
       },
       {
         path: '/form/simple-form',
-        component: () => import('pages/template/form/SimpleFormPage.vue')
+        component: () => import('pages/templates/form/SimpleFormPage.vue')
       },
       {
         path: '/form/complex-form',
-        component: () => import('pages/template/form/ComplexFormPage.vue')
+        component: () => import('pages/templates/form/ComplexFormPage.vue')
       },
       {
         path: 'table/simple-table',
-        component: () => import('pages/template/table/SimpleTablePage.vue')
+        component: () => import('pages/templates/table/SimpleTablePage.vue')
       }
     ]
   }
